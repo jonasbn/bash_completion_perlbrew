@@ -1,0 +1,21 @@
+#
+#  Completion for perlbrew:
+#
+#  perlbrew list
+#
+_perlbrew()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    if [[ "${prev}" == "use" ]] ; then
+        local opts=`perlbrew list`
+
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+
+complete -F _perlbrew perlbrew
