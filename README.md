@@ -23,13 +23,37 @@ perl-5.20.2@workflow
 ...
 ```
 
-## Installation
+## Download
 
 ```bash
 $ curl https://raw.githubusercontent.com/jonasbn/bash_completion_perlbrew/master/perlbrew > perlbrew
 ```
 
-Where your completions are located might vary:
+## Installation
+
+Where your completions are located might vary.
+
+### Personal
+
+If you want to install them for your personal use, do the following:
+
+```bash
+for bcfile in ~/.bash_completion.d/* ; do
+  . $bcfile
+done
+```
+
+Ref: [ServerFault.com: _Standard place for user defined bash_completion.d scripts?_](https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts)
+
+```bash
+$ mkdir ~/.bash_completion.d
+```
+
+```bash
+$ cp perlbrew ~/.bash_completion.d/
+```
+
+### System-wide example from Debian
 
 Based on [an introduction](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) to `bash` completions on Debian.
 
@@ -37,7 +61,13 @@ Based on [an introduction](https://debian-administration.org/article/316/An_intr
 $ sudo cp perlbrew /etc/bash_completion.d/
 ```
 
-This is not a part of [the completions](https://github.com/Homebrew/homebrew-completions) available under `brew` on OSX. But you can copy the `perlbrew` file to the same directory:
+### System-wide example from OSX
+
+This assumes you are using **Homebrew**
+
+Do note that paths vary based on whether you are using `bash` 3 or 4
+
+#### `bash` 3 (Formula: `bash-completions`):
 
 ```bash
 $ cp perlbrew /usr/local/etc/bash_completion.d/
@@ -46,7 +76,19 @@ $ cp perlbrew /usr/local/etc/bash_completion.d/
 And to activate right away:
 
 ```bash
-$ . /usr/local/etc/bash_completion.d/perlbrew
+$ source  /usr/local/etc/bash_completion.d/perlbrew
+```
+
+#### `bash` 4 (Formula: `bash-completions2`)
+
+```bash
+$ cp perlbrew /usr/local/share/bash-completion/completions/
+```
+
+And to activate right away:
+
+```bash
+$ source /usr/local/share/bash-completion/completions/perlbrew
 ```
 
 ## Motivation
@@ -64,6 +106,8 @@ From the [GNU Documentation](https://www.gnu.org/software/bash/manual/html_node/
 Good two-part article, "An Introduction to Bash Completion": [Part 1](https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1) and [Part 2](https://debian-administration.org/article/317/An_introduction_to_bash_completion_part_2).
 
 Please note that this experimental implementation has only been tested with `bash` version 3.
+
+The most comprehensive collection of `bash` completions I have come across is [the one](https://github.com/scop/bash-completion) from the **Debian Linux distribution**. It is also the one offered for OSX via **Homebrew**.
 
 ## License
 
