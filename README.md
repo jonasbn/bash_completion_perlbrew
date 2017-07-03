@@ -2,6 +2,8 @@
 
 Basic tab completion for [perlbrew](https://perlbrew.pl/).
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Usage
 
 This completion script, executes `perlbrew list` and offers completions for all the `perlbrew` perls and libraries installations you have available.
