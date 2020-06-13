@@ -2,13 +2,15 @@
 
 Basic tab completion for [perlbrew](https://perlbrew.pl/).
 
+![Spellcheck Action](https://github.com/jonasbn/bash_completion_perlbrew/workflows/Spellcheck%20Action/badge.svg)
+![Markdownlint Action](https://github.com/jonasbn/bash_completion_perlbrew/workflows/Markdownlint%20Action/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Usage
 
 This completion script, executes `perlbrew list` and offers completions for all the `perlbrew` perls and libraries installations you have available.
 
-```
+```bash
 $ perlbrew use <tab>
 perl-5.10.1
 perl-5.20.2
@@ -18,7 +20,7 @@ perl-5.20.2@workflow
 
 And the `bash` completion functionality even assists, when you specify more of your targets
 
-```
+```bash
 $ perlbrew use perl-5.20<tab>
 perl-5.20.2
 perl-5.20.2@workflow
@@ -77,7 +79,7 @@ This assumes you are using **Homebrew**
 
 Do note that paths vary based on whether you are using `bash` 3 or 4
 
-#### `bash` 3 (Formula: `bash-completions`):
+#### `bash` 3 (Formula: `bash-completions`)
 
 ```bash
 $ cp perlbrew /usr/local/etc/bash_completion.d/
