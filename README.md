@@ -125,4 +125,4 @@ This is made available under the MIT license, see separate license file.
 
 ## Copyright
 
-:copyright: jonasbn 2016-2017
+:copyright: jonasbn 2016-2020
