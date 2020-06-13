@@ -1,0 +1,14 @@
+jonasbn
+perlbrew
+OSX
+Homebrew
+usr
+cp
+sudo
+ServerFault
+bcfile
+githubusercontent
+https
+mkdir
+perl
+perls
