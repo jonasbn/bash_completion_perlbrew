@@ -49,7 +49,7 @@ done
 
 Ref: [ServerFault.com: _Standard place for user defined bash_completion.d scripts?_](https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts)
 
-Create a directiory for your completions:
+Create a directory for your completions:
 
 ```bash
 $ mkdir ~/.bash_completion.d
