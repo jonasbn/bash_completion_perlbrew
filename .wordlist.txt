@@ -12,3 +12,4 @@ https
 mkdir
 perl
 perls
+Shellcheck

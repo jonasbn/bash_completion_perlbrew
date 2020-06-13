@@ -2,6 +2,7 @@
 
 Basic tab completion for [perlbrew](https://perlbrew.pl/).
 
+![Shellcheck Action](https://github.com/jonasbn/bash_completion_perlbrew/workflows/Shellcheck%20Action/badge.svg)
 ![Spellcheck Action](https://github.com/jonasbn/bash_completion_perlbrew/workflows/Spellcheck%20Action/badge.svg)
 ![Markdownlint Action](https://github.com/jonasbn/bash_completion_perlbrew/workflows/Markdownlint%20Action/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
