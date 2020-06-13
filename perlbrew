@@ -15,6 +15,18 @@ _perlbrew()
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
+    elif [[ "${prev}" == "install" ]] ; then
+        local opts=`perlbrew available | grep --regexp="\.tar.bz2" --invert-match`
+
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+
+    elif [[ "${prev}" == "uninstall" ]] ; then
+        local opts=`perlbrew list`
+
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+
     fi
 }
 
