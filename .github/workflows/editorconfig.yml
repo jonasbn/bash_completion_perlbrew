@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: zbeekman/EditorConfig-Action@v1.1.0
+    - uses: zbeekman/EditorConfig-Action@v1.1.1
       name: Testing using eclint
       env:
         EC_FIX_ERROR: "false"
