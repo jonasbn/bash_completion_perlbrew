@@ -1,0 +1,15 @@
+name: Markdownlint Action
+on: push
+
+jobs:
+  build:
+    name: EditorConfig lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: zbeekman/EditorConfig-Action@v1.1.0
+      name: Testing using eclint
+      env:
+        EC_FIX_ERROR: "false"
+        ALWAYS_LINT_ALL_FILES: "true"
+
