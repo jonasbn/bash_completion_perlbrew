@@ -46,7 +46,7 @@ Create the file: `~/.bash_completion`, containing the code below:
 
 ```bash
 for bcfile in ~/.bash_completion.d/* ; do
-  . $bcfile
+    . $bcfile
 done
 ```
 

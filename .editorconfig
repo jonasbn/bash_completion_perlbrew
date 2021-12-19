@@ -1,18 +1,29 @@
-[perlbrew]
+root = true
+
+# All file types
+[*]
+
+# Preferred characterset encoding
 charset = utf-8
-end_of_line = lf
-indent_size = 4
+
+# Preferred indentation style
 indent_style = space
+indent_size = 4
+
+# Unix-style newlines with a newline ending the file
+end_of_line = lf
 insert_final_newline = true
-max_line_length = 79
-tab_width = 8
+
+# Trim possible trailing whitespace
 trim_trailing_whitespace = true
 
-[*.md]
-charset = utf-8
-end_of_line = lf
-indent_size = 4
-indent_style = space
-insert_final_newline = true
+[perlbrew]
 max_line_length = off
-trim_trailing_whitespace = true
+tab_width = 8
+
+[*.{md,mkdn}]
+max_line_length = off
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
