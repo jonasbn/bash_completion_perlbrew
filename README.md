@@ -106,7 +106,7 @@ $ source /usr/local/share/bash-completion/completions/perlbrew
 
 ## Motivation
 
-I have a huge list of `perlbrew` library installations and I tend to keep the names long and descriptive, so it seemed like tab completion was an interesting alternative to the __flow breaking copy-pasting__ and error prone typing away.
+I have a huge list of `perlbrew` library installations and I tend to keep the names long and descriptive, so it seemed like tab completion was an interesting alternative to the _flow breaking copy-pasting_ and error prone typing away.
 
 The programmatic capabilities of `bash` are truly powerful and useful and can be put to good use in use-cases like this.
 
