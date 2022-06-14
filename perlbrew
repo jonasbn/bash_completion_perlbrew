@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 #  Completion for perlbrew:
 #
@@ -11,18 +12,18 @@ _perlbrew()
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     if [[ "${prev}" == "use" ]] ; then
-        local opts=`perlbrew list`
+        opts=$(perlbrew list)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
     elif [[ "${prev}" == "install" ]] ; then
-        local opts=`perlbrew available | grep --regexp="\.tar.bz2" --invert-match`
+        opts=$(perlbrew available | grep --regexp="\.tar.bz2" --invert-match)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
 
     elif [[ "${prev}" == "uninstall" ]] ; then
-        local opts=`perlbrew list`
+        opts=$(perlbrew list)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
