@@ -12,21 +12,21 @@ _perlbrew()
 
     if [[ "${prev}" == "use" ]] ; then
         local opts
-        opts=`perlbrew list`
+        opts=$(perlbrew list)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
 
     elif [[ "${prev}" == "install" ]] ; then
         local opts
-        opts=`perlbrew available | grep --regexp="\.tar.bz2" --invert-match`
+        opts=$(perlbrew available | grep --regexp="\.tar.bz2" --invert-match)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
 
     elif [[ "${prev}" == "uninstall" ]] ; then
         local opts
-        opts=`perlbrew list`
+        opts=$(perlbrew list)
 
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
